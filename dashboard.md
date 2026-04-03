@@ -14,7 +14,7 @@ Un tableau de bord interactif permettant de visualiser et analyser les données 
 ## 🛠️ 2. Stack technique
 
 ### Frontend
-- **React v19** * pour la mise en page responsive et modulaire.  
+- **React v19** pour la mise en page responsive et modulaire.  
 - **Chart.js** pour afficher les graphiques.   
 - **Système de cartes** permettant de réorganiser ou étendre facilement le dashboard.
 - Utiliser **React.lazy()** pour charger des composants card de manière asynchrone.<br>
@@ -250,11 +250,6 @@ Elle démontre ma polyvalence entre **backend, frontend et analyse statistique**
 
 Vous pouvez voir le résultat ici :<br />
 <a href="http://nbcandidature.fr/DashboardPublicPage" target="_blank" title="Dashboard - Vue d'ensemble">📰 Dashboard - Vue d'ensemble </a>
-
-Parfait — et tu as raison 👍
-👉 Si ton backend, la sécurité et les perfs sont déjà solides, il vaut mieux **ne pas les remettre** : sinon ça dilue ton message.
-
-On va donc faire une section **100% orientée produit / UX / data viz**, ce qui est beaucoup plus pertinent pour un dashboard.
 
 
 ## 🚀 8. Perspectives d’évolution
