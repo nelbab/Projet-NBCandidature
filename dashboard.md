@@ -13,7 +13,7 @@ Un tableau de bord interactif permettant de visualiser et analyser les données 
 
 ## 🛠️ 2. Stack technique
 
-### Frontend
+### a. Frontend
 - **React v19** pour la mise en page responsive et modulaire.  
 - **Chart.js** pour afficher les graphiques.   
 - **Système de cartes** permettant de réorganiser ou étendre facilement le dashboard.
@@ -22,12 +22,12 @@ L'utilisation de React.lazy() pour le code splitting et l’optimisation des per
 - Optimisation responsive (desktop / tablette / mobile).
 - Le dashboard est constitué de différents composants card ce qui le rend facilement modifiable.  
 
-### Backend
+### b. Backend
 - **Express** côté serveur pour générer dynamiquement le contenu.  
 - **Connexion à MongoDB** pour extraire les données stockées dans les différentes collections.  
 - Requêtes pour agréger, filtrer et analyser les données (totaux, moyennes, ...).
 
-### Données
+### c. Données
 - Avec `MongoDB`, l'agrégation consiste à obtenir des informations synthétiques. Pour ce faire, les données d'un ou de plusieurs documents sont analysées et filtrées en fonction de certains facteurs définis. 
  
 
@@ -202,14 +202,14 @@ ChartsPlateforme.displayName = 'ChartsPlateforme';
 🎴Ecran du Dashboard utilisateur :<br />
 Ecran desktop<br>
 <img style="margin: 10px" src="images/version-desktop-Dashboard.png" alt="Dashboard" title="Dashboard" height="200px" /><br>
-Ecran desktop<br>
-<img style="margin: 10px" src="images/version-mobile-Dashboard.png" alt="Dashboard modile" title="Dashboard mobile" height="200px" /><br>
+Ecran mobile<br>
+<img style="margin: 10px" src="images/version-mobile-Dashboard.png" alt="Dashboard mobile" title="Dashboard mobile" height="200px" /><br>
 
 🎴Ecran du Dashboard public :<br />
 Ecran desktop<br>
 <img style="margin: 10px" src="images/version-desktop-Dashboard-public.png" alt="Dashboard public" title="Dashboard public" height="200px" /><br>
-Ecran desktop<br>
-<img style="margin: 10px" src="images/version-mobile-Dashboard-public.png" alt="Dashboard modile" title="Dashboard mobile" height="200px" /><br>
+Ecran mobile<br>
+<img style="margin: 10px" src="images/version-mobile-Dashboard-public.png" alt="Dashboard mobile" title="Dashboard mobile" height="200px" /><br>
 
 ## 6. 🚀 Compétences mises en avant
 
