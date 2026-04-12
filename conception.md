@@ -4,6 +4,8 @@
 La création de cette application web me permet de concevoir un outil numérique pratique pour répertorier, organiser et consulter les candidatures. L'objectif est de créer une interface simple et intuitive, accessible à tous.<br /> 
 Voici une présentation générale pour la conception d'une telle application : <br /><br />
 
+---
+
 ## 1. 🚀 Objectifs de l'application
 
 ###    • Facilité d'utilisation : 
@@ -13,6 +15,8 @@ Offres, plateformes, retours, correspondances entre les stacks/compétences, ale
 ###    • Accessibilité : 
 Permettre un accès facile sur différents appareils (ordinateurs, tablettes, smartphones) via un navigateur web.
 <br /><br />
+
+---
 
 ## 2. 💡 Fonctionnalités principales
 
@@ -72,6 +76,8 @@ Les utilisateurs peuvent créer des comptes pour enregistrer et synchroniser leu
 Les utilisateurs peuvent exporter leur fiche ou tableaux de suivi sous forme de fichier PDF ou CSV pour le conserver en local ou le partager facilement.
 <br /><br />
 
+---
+
 ## 3. 🛠️ Technologies utilisées
 
 ###    • Frontend (interface utilisateur) : 
@@ -85,6 +91,8 @@ Une base de données NoSQL `MongoDB`, pour stocker les informations relatives au
 ###    • Hébergement et déploiement : 
 Utilisation du service `AWS` pour l'hébergement de l'application, offrant ainsi une solution scalable et accessible à tous.
 <br /><br />
+
+---
 
 ## 4. 🧩 Maquettes de l'application
 
@@ -128,6 +136,8 @@ Possibilité de recherche par poste.
 Affichage le formulaire de création ou de mise à jour d'un modèle.
 <br /><br />
 
+---
+
 ## 5. 📝 Étapes de développement
 
 ###    • Phase 1 : Planification : 
@@ -141,6 +151,8 @@ Tester l'application sur différents appareils et navigateurs pour s'assurer de 
 ###    • Phase 5 : Lancement et maintenance : 
 Déployer l'application et effectuer des mises à jour régulières en fonction des retours des utilisateurs.
 <br /><br />
+
+---
 
 ## 6. 🎯 Conclusion
 

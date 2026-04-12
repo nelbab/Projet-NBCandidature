@@ -2,7 +2,7 @@
 
 Une interface calendrier interactive permettant de visualiser, organiser et analyser les événements liés au suivi des candidatures à travers une représentation temporelle claire, structurée et exploitable.
 
-
+---
 ## 🎯 1. Objectifs
 
 * Fournir une **interface ergonomique et responsive** pour la visualisation temporelle des candidatures.
@@ -11,7 +11,7 @@ Une interface calendrier interactive permettant de visualiser, organiser et anal
 * Mettre en place une **navigation fluide entre données structurées et visualisation calendrier**.
 * Illustrer mes compétences en **gestion de données temporelles** et en **interfaces interactives**.
 
-
+---
 ## 🛠️ 2. Stack technique
 
 ### a. Frontend
@@ -35,7 +35,7 @@ Une interface calendrier interactive permettant de visualiser, organiser et anal
   * Vue liste (groupée)
   * Vue calendrier (linéaire)
 
-
+---
 ## 📊 3. Fonctionnalités principales
 
 ### Visualisation temporelle
@@ -49,6 +49,7 @@ Une interface calendrier interactive permettant de visualiser, organiser et anal
 * Navigation temporelle (précédent / suivant / aujourd’hui).
 * Localisation complète en français.
 
+---
 
 ### Structuration des événements
 
@@ -91,6 +92,7 @@ Chaque type est enrichi par :
 
 * Mise en évidence dynamique des éléments sélectionnés.
 
+---
 
 ## 🧩 4. Exemple de transformation des données
 
@@ -104,6 +106,7 @@ const pushEvent = (evt: Omit<MyEvent, "id">) => {
 
 Ce mécanisme permet de transformer des données métier en une structure adaptée à la visualisation calendrier.
 
+---
 
 ## 🖥️ 5. Organisation de l’interface
 
@@ -120,6 +123,8 @@ L’interface est structurée en deux zones principales :
 
 Cette organisation permet une **lecture rapide des données** tout en conservant une navigation efficace.
 
+---
+
 ## 🖥️ 6. Captures d'écrans : 
 
 🎴Ecran du calendrier :<br />
@@ -127,6 +132,8 @@ Ecran desktop<br>
 <img style="margin: 10px" src="images/version-desktop-calendrier.png" alt="Calendrier" title="Calendrier" height="200px" /><br>
 Ecran mobile<br>
 <img style="margin: 10px" src="images/version-mobile-calendrier.png" alt="Calendrier mobile" title="Calendrier mobile" height="200px" /><br>
+
+---
 
 ## 🚀 7. Compétences mises en avant
 
@@ -156,6 +163,7 @@ Ecran mobile<br>
 * Formatage dynamique selon les vues
 * Localisation complète
 
+---
 
 ## 🎯 8. Conclusion
 
@@ -169,6 +177,7 @@ Ce module **Calendrier** illustre ma capacité à :
 
 Cette approche peut être étendue à tout système nécessitant une **visualisation temporelle de données** (gestion de projets, planning, suivi d’activité, etc.).
 
+---
 
 ## 🚀 9. Perspectives d’évolution
 

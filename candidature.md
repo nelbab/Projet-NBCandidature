@@ -3,6 +3,7 @@
 
 Une interface complète de gestion et de visualisation d’une candidature permettant de centraliser, structurer et exploiter l’ensemble des informations liées au processus de recrutement, depuis l’envoi jusqu’au suivi des interactions.
 
+---
 
 ## 🎯 1. Objectifs
 
@@ -12,6 +13,7 @@ Une interface complète de gestion et de visualisation d’une candidature perme
 * Mettre en place des **indicateurs visuels et analytiques** pour aider à la prise de décision.
 * Illustrer mes compétences en **modélisation de données**, **logique métier** et **interfaces complexes**.
 
+---
 
 ## 🛠️ 2. Stack technique
 
@@ -49,6 +51,7 @@ Une interface complète de gestion et de visualisation d’une candidature perme
   * `mapCandidatureToContacts`
   * `mapCandidatureToSuites`
 
+---
 
 ## 📊 3. Fonctionnalités
 
@@ -157,6 +160,7 @@ Génération dynamique d’un document complet :
 * Navigation vers les entités liées
 * Ouverture de documents
 
+---
 
 ## 🧩 4. Exemple de transformation des données
 
@@ -176,6 +180,7 @@ return events.sort((a, b) => a.date.getTime() - b.date.getTime());
 
 Ce mécanisme permet de reconstruire une **timeline unifiée** à partir de sources multiples.
 
+---
 
 ## 🖥️ 5. Organisation de l’interface
 
@@ -188,6 +193,8 @@ L’interface est structurée autour d’une **card principale** contenant :
 * Historique des interactions
 
 Cette organisation permet une **lecture progressive et hiérarchisée** des informations.
+
+---
 
 ## 🖥️ 6. Captures d'écrans : 
 
@@ -226,6 +233,7 @@ Ecran mobile<br>
 * Mise en page programmée
 * Gestion multi-pages
 
+---
 
 ## 🎯 8. Conclusion
 
@@ -239,6 +247,7 @@ Ce module **Candidature** illustre ma capacité à :
 
 Ce type d’architecture est applicable à tout système nécessitant la gestion d’un **cycle de vie d’entités complexes** (CRM, suivi client, gestion de projets, etc.).
 
+---
 
 ## 🚀 9. Perspectives d’évolution
 

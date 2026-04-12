@@ -2,6 +2,7 @@
 
 Un tableau de bord interactif permettant de visualiser et analyser les données et les statistiques de suivi des candidature à travers une interface claire, responsive et orientée data-visualisation.
 
+---
 
 ## 🎯 1. Objectifs
 
@@ -10,6 +11,8 @@ Un tableau de bord interactif permettant de visualiser et analyser les données 
 - Créer un dashboard utilisateur avec les données de ses candidatures et un dashboard public avec les données générales de tous les utilisateurs.  
 - Appliquer des **bonnes pratiques de data engineering** (requêtes optimisées, organisation en cartes modulaires).  
 - Illustrer mes compétences en **conception d’interfaces analytiques** et en **visualisation de données**.  
+
+---
 
 ## 🛠️ 2. Stack technique
 
@@ -29,7 +32,8 @@ L'utilisation de React.lazy() pour le code splitting et l’optimisation des per
 
 ### c. Données
 - Avec `MongoDB`, l'agrégation consiste à obtenir des informations synthétiques. Pour ce faire, les données d'un ou de plusieurs documents sont analysées et filtrées en fonction de certains facteurs définis. 
- 
+
+---
 
 ## 📊 3. Fonctionnalités & Statistiques
 
@@ -72,130 +76,42 @@ L'utilisation de React.lazy() pour le code splitting et l’optimisation des per
 - Statistiques par stack ou compétences présentes dans les offres
 - Visuel pour savoir si la stack ou compétence est l'un du candidat
 
+---
+
 ## 🧩 4. Exemple d'une card
 
-Extrait du code de la card ChartsPlateforme.tsx
+Extraits du code de la card ChartsPlateforme.tsx
 
 ```
-const { pieData } = useMemo(() => {
-    if (!metadata.length) return { pieData: { labels: [], datasets: [] } };
+// Agrégation des candidatures par plateforme
+const counts = depotMeta.values.map((v) =>
+  candidatures.filter((c) => c.depot === v.key).length
+);
 
-    const depotMeta = metadata.find((m) => m._id === "Depot");
-    if (!depotMeta) return { pieData: { labels: [], datasets: [] } };
+// Normalisation des couleurs (mapping Tailwind → HEX)
+const colors = depotMeta.values.map((v) =>
+  tailwindToHex[v.color] ?? "#9ca3af"
+);
 
-    const counts = depotMeta.values.map((v) =>
-      candidatures.filter((c) => c.depot === v.key).length
-    );
-
-    // --- FIX TS ERROR: normaliser v.color avant d'indexer tailwindToHex ---
-    const colors = depotMeta.values.map((v) => {
-      const colorKey = typeof v.color === 'string' ? v.color : '';
-      return tailwindToHex[colorKey] ?? '#9ca3af'; // fallback gris si non trouvé
-    });
-
-    const pieData = {
-      labels: depotMeta.values.map((v) => v.label),
-      datasets: [
-        {
-          data: counts,
-          backgroundColor: colors,
-        },
-      ],
-    };
-
-    return { pieData };
-  }, [metadata, candidatures]);
-
-  const pieOptions = useMemo(
-    () => ({
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: 'right' as const,
-          labels: {
-            color: '#000000',
-            font: {
-              weight: 'bold' as const,
-            },
-          },
-        },
-        tooltip: {
-          callbacks: {
-            label: (context: TooltipItem<'pie'>) => {
-              const dataset = context.dataset;
-              const total = dataset.data.reduce((a: number, b: number) => a + b, 0);
-              const value = context.parsed;
-              const percentage = total ? ((value / total) * 100).toFixed(1) : '0';
-              return `${context.label}: ${value} (${percentage}%)`;
-            }
-          },
-        },
-        datalabels: {
-          color: '#ffffff',
-          font: {
-            weight: 'bold' as const,
-            size: 14
-          },
-          formatter: (value: number, context: Context) => {
-            const dataset = context.dataset as ChartDataset<'pie', number[]>;
-            const total = dataset.data.reduce((a: number, b: number | null) => a + (b || 0), 0);
-            const percentage = ((value / total) * 100).toFixed(1);
-            return `${percentage}%`;
-          }
-        }
-      },
-    }),
-    []
-  );
-
-  useEffect(() => {
-    const pieChart = pieRef.current;
-    return () => {
-      pieChart?.destroy();
-    };
-  }, []);
-
-  return (
-    <div className="md:w-full w-96">
-      <Card
-        className="p-2 sm:p-4 md:p-6 h-[280px] sm:h-[320px] md:h-[380px] lg:h-[420px] xl:h-[450px] mt-6 sm:mt-8 md:mt-10 w-full"
-        style={{ display: 'flex', flexDirection: 'column' }}
-        placeholder={undefined}
-        onResize={undefined}
-        onResizeCapture={undefined}
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
-      >
-        {/* Header */}
-        <div
-          className="flex flex-col sm:flex-row justify-center items-center mb-2 sm:mb-3 md:mb-4"
-          style={{ flexShrink: 0 }}
-        >
-          <FaChartPie className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 mr-0 sm:mr-2 mb-1 sm:mb-0 text-blue-500" />
-          <Typography
-            variant="h4"
-            className="text-center sm:text-left text-xs sm:text-sm md:text-base"
-            placeholder={undefined}
-            onResize={undefined}
-            onResizeCapture={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
-          >
-            Répartition des dépôts par plateformes ou types
-          </Typography>
-        </div>
-
-        {/* Chart Container */}
-        <div className="w-full overflow-hidden" style={{ flex: 1, minHeight: 0 }}>
-          <Pie ref={pieRef} data={pieData} options={pieOptions} />
-        </div>
-      </Card>
-    </div>
-  );
-
-ChartsPlateforme.displayName = 'ChartsPlateforme';
+// Construction des données pour le graphique
+const pieData = {
+  labels: depotMeta.values.map((v) => v.label),
+  datasets: [
+    {
+      data: counts,
+      backgroundColor: colors,
+    },
+  ],
+};
 ```
+**Principes appliqués :**
+
+* ✔️ Calcul dynamique des statistiques à partir des données MongoDB
+* ✔️ Transformation des données en format exploitable par Chart.js
+* ✔️ Normalisation des styles pour cohérence visuelle
+* ✔️ Optimisation des performances via `useMemo`
+
+---
 
 ## 🖥️ 5. Captures d'écrans : 
 
@@ -210,6 +126,8 @@ Ecran desktop<br>
 <img style="margin: 10px" src="images/version-desktop-Dashboard-public.png" alt="Dashboard public" title="Dashboard public" height="200px" /><br>
 Ecran mobile<br>
 <img style="margin: 10px" src="images/version-mobile-Dashboard-public.png" alt="Dashboard mobile" title="Dashboard mobile" height="200px" /><br>
+
+---
 
 ## 6. 🚀 Compétences mises en avant
 
@@ -234,6 +152,8 @@ Utilisation avancée de `React` pour une interface flexible :
 
 Implémentation de métriques analytiques (globales et temporelles) permettant d’identifier les tendances et performances du processus de candidature.
 
+---
+
 ## 🎯 7. Conclusion
 
 Ce projet de **Dashboard** illustre ma capacité à :
@@ -251,6 +171,7 @@ Elle démontre ma polyvalence entre **backend, frontend et analyse statistique**
 Vous pouvez voir le résultat ici :<br />
 <a href="http://nbcandidature.fr/DashboardPublicPage" target="_blank" title="Dashboard - Vue d'ensemble">📰 Dashboard - Vue d'ensemble </a>
 
+---
 
 ## 🚀 8. Perspectives d’évolution
 

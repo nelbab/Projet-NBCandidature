@@ -1,6 +1,8 @@
 # 📑 Conception des pages avec liste : pagination et recherche 📑
 <br>
 
+---
+
 ## 💡 1. Mon objectif ?
 
 <b>Pour l'utilisateur</b>
@@ -11,6 +13,8 @@
 - Les tris permettent d'identifier facilement des groupes d'utilisateurs partageant certaines caractéristiques (date d'inscription, statut, etc.).
 - La recherche par date facilitera le contrôle des documents, contenus et utilisateurs.
 <br><br>
+
+---
 
 ## 2. 📖 Implantation de la pagination
 
@@ -46,6 +50,8 @@ La pagination est un outil essentiel pour améliorer l'expérience utilisateur s
 
 En résumé, la pagination est un élément clé pour offrir une expérience utilisateur optimale sur une page de liste d'informations. Elle améliore la vitesse, la navigation, le référencement et la gestion des données.
 <br><br>
+
+---
 
 ## 3. 🔎 Implantation de la recherche
 
@@ -85,6 +91,7 @@ Voici les principaux avantages :
 En résumé, la recherche par mots-clés est un outil essentiel pour améliorer l'efficacité et l'expérience utilisateur lors de l'affichage de listes d'informations. Elle permet de cibler précisément l'information, de gagner du temps et de s'adapter aux besoins spécifiques des utilisateurs.
 <br><br>
 
+---
 
 ## 4. Affichage entre 2 dates ou une date précise
 
@@ -118,6 +125,7 @@ L’ajout d’un filtre de date permet une navigation plus ciblée et un contrô
 - J'ai ajouté une zone de texte et un bouton pour faire une recherche par mot-clé.
 <br><br>
 
+---
 
 ## 🎯 6. Conclution
 

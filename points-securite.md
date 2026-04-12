@@ -1,5 +1,7 @@
 # 🔒 Points sur la sécurité de l'application 📑
 
+---
+
 ## 📑 1. Sécurisation des données
 
 ### a. Utilisation de l'ODM Mongoose
@@ -55,6 +57,8 @@ const phoneRegex = () =>
 - utilisation de la librairie <b>crypto-js</b>.
 - J'ai crypté l'access_token avant de l'enregistrer dans le cookie et le refresh_token avant de l'enregistrer dans la base de données.
 
+---
+
 ## 👥 2. Sécurisation des sessions
 
 ### a. JWS token 
@@ -82,6 +86,8 @@ Les <b>JWS token</b> permettent une protection des connexions. <br />
 - Le <b>middleware</b> me permet de gérer les <b>tokens</b>. Contrôle de l'existance et de la validité du token access.
 <br><br>
 
+---
+
 ## 🌍 3. Sécurisation de l'application avec le https
 
 Une fois que l'application sera finie et opérationnelle, le déploiement se fera sur un serveur debian avec l'utilisation d'un <b>certificat de sécurité TLS</b> pour avoir un accès de l'application en https.<br>
@@ -91,6 +97,21 @@ J'ai activé la redirection de tout le trafic HTTP vers HTTPS.
 - Ce qui permet de chiffrer les requêtes http `POST` notamment.
 <br><br>
 
+---
+
 ## 🎯 4. Conclusion
 
+La sécurité de l’application NBCandidature a été pensée de manière **globale et proactive**, en intégrant des mécanismes à chaque niveau de l’architecture.
+
+De la **validation des données en entrée** avec Zod, à la **sécurisation des accès** via les tokens et middleware, en passant par le **hachage des mots de passe** et le **chiffrement des données sensibles**, chaque couche contribue à réduire les risques d’exploitation.
+
+L’utilisation de bonnes pratiques telles que :
+
+* la gestion sécurisée des sessions (JWS, cookies protégés)
+* la limitation du débit des requêtes (rate limiting)
+* et le chiffrement des échanges via HTTPS
+
+permet d’assurer un **équilibre entre sécurité, performance et expérience utilisateur**.
+
+👉 Cette approche démontre ma capacité à concevoir une application **robuste, sécurisée et conforme aux standards actuels du développement web**.
 
