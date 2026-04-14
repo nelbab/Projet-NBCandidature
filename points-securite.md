@@ -1,6 +1,5 @@
 # 🔒 Points sur la sécurité de l'application 📑
 
----
 
 ## 📑 1. Sécurisation des données
 
