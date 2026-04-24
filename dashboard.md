@@ -17,21 +17,64 @@ Un tableau de bord interactif permettant de visualiser et analyser les données 
 ## 🛠️ 2. Stack technique
 
 ### a. Frontend
-- **React v19** pour la mise en page responsive et modulaire.  
-- **Chart.js** pour afficher les graphiques.   
-- **Système de cartes** permettant de réorganiser ou étendre facilement le dashboard.
-- Utiliser **React.lazy()** pour charger des composants card de manière asynchrone.<br>
-L'utilisation de React.lazy() pour le code splitting et l’optimisation des performances (réduction du bundle initial). 
-- Optimisation responsive (desktop / tablette / mobile).
-- Le dashboard est constitué de différents composants card ce qui le rend facilement modifiable.  
+
+Le frontend est développé avec **React v19**, permettant la création d’une interface modulaire, réactive et facilement maintenable
+
+- L’architecture repose sur un **système de composants de type “cards”**, offrant une grande flexibilité pour organiser, ajouter ou modifier les éléments du dashboard sans impacter l’ensemble de l’application.
+
+- Les visualisations de données sont réalisées avec **Chart.js**, facilitant l’intégration de graphiques dynamiques et interactifs.
+
+- Afin d’optimiser les performances, notamment le temps de chargement initial, les composants sont chargés de manière asynchrone via `React.lazy()`. Cette approche de **code splitting** permet de ne charger que les ressources nécessaires au moment opportun.
+
+- Une attention particulière est portée au **responsive design**, garantissant une expérience utilisateur cohérente sur desktop, tablette et mobile.
+
+---
 
 ### b. Backend
-- **Express** côté serveur pour générer dynamiquement le contenu.  
-- **Connexion à MongoDB** pour extraire les données stockées dans les différentes collections.  
-- Requêtes pour agréger, filtrer et analyser les données (totaux, moyennes, ...).
+
+Le backend repose sur **Express**, utilisé pour exposer des endpoints permettant de fournir les données nécessaires au dashboard.
+
+Il assure plusieurs responsabilités :
+
+* La récupération des données depuis la base **MongoDB**.
+* Le traitement et la transformation des données (agrégation, filtrage, calculs statistiques).
+* La structuration des réponses sous un format optimisé pour le frontend.
+
+Cette couche intermédiaire joue un rôle clé dans la séparation des responsabilités entre l’interface utilisateur et la gestion des données.
+
+---
 
 ### c. Données
-- Avec `MongoDB`, l'agrégation consiste à obtenir des informations synthétiques. Pour ce faire, les données d'un ou de plusieurs documents sont analysées et filtrées en fonction de certains facteurs définis. 
+
+Les données sont stockées dans **MongoDB**, une base NoSQL adaptée à la gestion de volumes importants et de structures flexibles.
+
+L’exploitation des données repose principalement sur le **framework d’agrégation MongoDB**, permettant de produire des indicateurs synthétiques à partir de collections brutes :
+
+* calcul de totaux,
+* moyennes,
+* regroupements,
+* filtrages selon différents critères.
+
+Cette approche permet de préparer des données directement exploitables pour la visualisation, limitant ainsi les traitements côté frontend.
+
+---
+
+### d. Optimisation des performances
+
+Une stratégie d’optimisation a été mise en place pour améliorer l’efficacité globale du dashboard.
+
+Plutôt que d’effectuer un appel à la base de données pour chaque composant, le backend réalise un **appel unique centralisé** regroupant l’ensemble des besoins en données. Cette requête agrégée permet de construire une réponse complète, structurée sous forme d’un objet JSON.
+
+Chaque composant frontend consomme ensuite uniquement la portion de données qui lui est nécessaire, sans générer de requêtes supplémentaires.
+
+Cette approche présente plusieurs avantages :
+
+* réduction du nombre d’appels réseau,
+* amélioration du temps de chargement,
+* diminution de la charge sur la base de données,
+* meilleure cohérence des données affichées.
+
+Elle s’inscrit dans une logique de **Backend-for-Frontend (BFF)**, favorisant la performance, la maintenabilité et la scalabilité de l’application.
 
 ---
 
