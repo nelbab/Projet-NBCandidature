@@ -1,4 +1,4 @@
-# 🧠 Retour d’expérience & choix techniques 🧠
+# 🧠 Retour d’expérience et choix techniques 🧠
 
 
 ## ⚙️ 1. Stack utilisée

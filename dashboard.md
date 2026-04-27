@@ -78,7 +78,7 @@ Elle s’inscrit dans une logique de **Backend-for-Frontend (BFF)**, favorisant 
 
 ---
 
-## 📊 3. Fonctionnalités & Statistiques
+## 📊 3. Fonctionnalités et Statistiques
 
 ### Statistiques globales
 - Nombre total de candidatures  
@@ -228,7 +228,7 @@ Afin d’améliorer l’expérience utilisateur et la pertinence des analyses, p
 
 ### b. Personnalisation du dashboard
 
-* Réorganisation des cards via drag & drop
+* Réorganisation des cards via drag et drop
 * Possibilité d’ajouter / supprimer des widgets selon les besoins utilisateur
 * Sauvegarde de layouts personnalisés
 

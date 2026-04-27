@@ -183,7 +183,7 @@ Cette approche peut être étendue à tout système nécessitant une **visualisa
 
 ### a. Interactivité avancée
 
-* Drag & drop des événements
+* Drag et drop des événements
 * Création / modification d’événements
 * Synchronisation avec des calendriers externes
 
