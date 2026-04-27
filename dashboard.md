@@ -101,6 +101,7 @@ Elle s’inscrit dans une logique de **Backend-for-Frontend (BFF)**, favorisant 
 - Affichage des 10 dernières candidatures en cours
 - Affichage des prochains rendez-vous (≤ 8 jours)
 - Affichage des actions à effectuer (≤ 8 jours)
+- Affichage des 5 derniers contrats
   
 ### Statistiques par plateforme emploi
 -  Nombre de candidatures
